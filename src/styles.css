@@ -1,8 +1,288 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #121212;
+a {
+  all: unset;
+}
+ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+body {
+  background-color: #fbfbfb;
+  max-width: 100vh;
+  overflow-x: hidden;
+  min-width: 300px;
+}
+
+#header {
+  min-width: 400px;
+  padding: 5vh 2vw;
+  margin-bottom: 50px;
+  background-color: #81bfda;
+  background: linear-gradient(to Bottom Right, #81bfda 50%, #fbfbfb 50%);
+}
+
+#profile-img {
+  min-width: 400px;
+  z-index: 2;
+  position: relative;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+    -2px -2px 5px rgba(255, 255, 255, 0.6);
+  background-image: url(./asset/resource/pexels-sulimansallehi-1704488.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  color: #fbfbfb;
+}
+
+#about-me {
+  min-width: 400px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 4vw;
+}
+
+#main-container {
+  width: 100vw;
+  min-width: 400px;
+  padding: 5vh 5vw;
+  margin-bottom: 200px;
+  /* background-color: antiquewhite; */
+}
+#grid-container {
+  padding-top: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2vw;
+}
+.placards {
+  /* text-align: center; */
+  /* background: red; */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+    -2px -2px 5px rgba(255, 255, 255, 0.6);
+  min-height: 600px;
+  min-width: 300px;
+}
+.project-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #81bfda;
+  height: 60%;
+  width: 100%;
+  color: aliceblue;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  p {
+    color: grey;
+  }
+  h1 {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    ul {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+#footer {
+  min-width: 400px;
+  background-color: #81bfda;
+  color: rgb(240, 238, 238);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 5vw;
+  width: 100vw;
+  gap: 5vw;
+}
+#footer-text {
+  min-width: 400px;
+  /* margin: 10vh 5vw; */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-size: 1.6em;
+  flex: 1;
+  #contacts {
+    flex-direction: column;
+  }
+}
+#footer-img {
+  background-image: url(./asset/resource/pexels-sulimansallehi-1704488.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 1200px) {
+  #header {
+    width: 100vw;
+    min-width: 600px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #profile-img {
+    width: 35vw;
+    min-width: 500px;
+    height: 85vh;
+    margin-right: -5vw;
+  }
+  #about-me {
+    background-color: #fbfbfb;
+    min-width: 650px;
+    width: 50vw;
+    height: 80vh;
+
+    padding: 5vh 3vw 0 7vw;
+
+    z-index: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+      -2px -2px 5px rgba(255, 255, 255, 0.6);
+
+    p {
+      font-size: 1.6rem;
+      line-height: 200%;
+      font-weight: lighter;
+    }
+    ul {
+      align-self: flex-end;
+      gap: 3vw;
+      li {
+        cursor: pointer;
+      }
+    }
+  }
+  #footer-img {
+    background-color: bisque;
+    height: 60vh;
+    width: 30vw;
+  }
+}
+
+@media (min-width: 780px) and (max-width: 1200px) {
+  #header {
+    /* Add your styles here */
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #profile-img {
+    /* float: right; */
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transform: translate(20%, -30%); /* Adds overlap effect */
+    margin: 0 15px 10px 0;
+  }
+
+  #about-me {
+    display: flex;
+    background: transparent;
+    /* gap: 2rem; */
+    align-items: flex-start;
+    justify-content: center;
+    width: 60%;
+    height: 400px;
+    padding: 5vh 5vw;
+    font-size: 1.6rem;
+    z-index: 3;
+    box-shadow: none;
+    h1 {
+      position: relative;
+      left: 4vw;
+    }
+    p {
+      position: relative;
+      left: 5vw;
+    }
+    /* flex-wrap: wrap; */
+  }
+  #imp-links {
+    display: none;
+  }
+  #footer-img {
+    background-color: bisque;
+    height: 40vh;
+    width: 20vw;
+  }
+}
+
+@media (max-width: 780px) {
+  #header {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+  #profile-img {
+    align-self: center;
+    width: 60vw;
+    height: 60vh;
+    min-width: 400px;
+    /* width: 40vh; */
+  }
+  #about-me {
+    justify-content: center;
+    align-items: center;
+  }
+  #footer {
+    padding: 0;
+  }
+  #footer-text {
+    align-items: center;
+    padding: 5vh 5vw;
+    #desc {
+      text-align: center;
+    }
+  }
+  #footer-img {
+    margin-top: 5vh;
+    background-color: bisque;
+    height: 80vh;
+    width: 100vw;
+  }
+}
+
+.fa-brands {
+  font-size: 2rem;
 }
